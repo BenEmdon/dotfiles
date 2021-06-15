@@ -6,6 +6,3 @@ if ! grep -q "root.*/bin/zsh" /etc/passwd
 then
   chsh -s /bin/zsh root
 fi
-
-sudo apt install python3-dev python3-pip python3-setuptools
-sudo pip3 install thefuck

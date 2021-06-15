@@ -100,6 +100,9 @@ alias zshconfig="code $HOME/.zshrc"
 alias refrzsh="source $HOME/.zshrc"
 alias be="bundle exec"
 alias br="bin/rails"
+# eval $(thefuck --alias fuck)
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # https://github.com/golang/go/wiki/SettingGOPATH#zsh
 export GOPATH=$HOME/go
