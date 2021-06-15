@@ -8,11 +8,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -33,7 +33,7 @@ ZSH_THEME="robbyrussell"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -64,13 +64,11 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,29 +95,29 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# export GEM_EDITOR="/usr/local/bin/code"
-
-# alias zshconfig="code ~/.zshrc"
+alias code="code-insiders"
+alias zshconfig="code $HOME/.zshrc"
+alias refrzsh="source $HOME/.zshrc"
 alias be="bundle exec"
 alias br="bin/rails"
-# alias cdg="cd $HOME/github"
-# alias cdgg="cd $HOME/github/github"
-eval $(thefuck --alias fuck)
 
-# alias notifyt="terminal-notifier -title 'Terminal 🦑' -message 'Done ✨' -sound Blow"
+# Pure prompt https://github.com/sindresorhus/pure#getting-started
+# https://github.com/sindresorhus/pure#manually
+fpath+=$HOME/.zsh/pure
 
-# fzf config stuff
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+autoload -U promptinit; promptinit
 
-# export BUNDLER_EDITOR='code'
+# change the path color
+zstyle :prompt:pure:path color green
 
-# export PATH="$HOME/github/gh-helper-cli/exe:$PATH"
-# export PATH="$HOME/github/github/bin:$PATH"
+prompt pure
 
-# export PATH="$(brew --prefix)/bin:$PATH"
+# https://github.com/golang/go/wiki/SettingGOPATH#zsh
+export GOPATH=$HOME/go
+
+# https://github.com/rbenv/rbenv#installation
+path=("$GOPATH/bin" "$HOME/.rbenv/bin" "$HOME/.rbenv/shims" $path)
+
+export PATH
 
 # eval "$(rbenv init -)"
-# eval "$(nodenv init -)"
-# export PATH="/usr/local/sbin:$PATH"
