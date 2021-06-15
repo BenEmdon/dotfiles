@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -100,17 +100,6 @@ alias zshconfig="code $HOME/.zshrc"
 alias refrzsh="source $HOME/.zshrc"
 alias be="bundle exec"
 alias br="bin/rails"
-
-# Pure prompt https://github.com/sindresorhus/pure#getting-started
-# https://github.com/sindresorhus/pure#manually
-fpath+=$HOME/.zsh/pure
-
-autoload -U promptinit; promptinit
-
-# change the path color
-zstyle :prompt:pure:path color green
-
-prompt pure
 
 # https://github.com/golang/go/wiki/SettingGOPATH#zsh
 export GOPATH=$HOME/go
