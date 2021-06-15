@@ -1,11 +1,11 @@
 #!/bin/sh
 # Run by Codespaces after starting
 
-# Set zsh as default shell
+# Always want to use ZSH as my default shell (e.g. for SSH)
 if ! grep -q "root.*/bin/zsh" /etc/passwd
 then
-  sudo chsh -s /bin/zsh root
+  chsh -s /bin/zsh root
 fi
 
-# Default to signing git commits
-git config --global commit.gpgsign true
+sudo apt install python3-dev python3-pip python3-setuptools
+sudo pip3 install thefuck
