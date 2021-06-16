@@ -95,7 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias code="code-insiders"
 alias zshconfig="code $HOME/.zshrc"
 alias refrzsh="source $HOME/.zshrc"
 alias be="bundle exec"
