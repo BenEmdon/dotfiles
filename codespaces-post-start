@@ -6,3 +6,5 @@ if ! grep -q "root.*/bin/zsh" /etc/passwd
 then
   chsh -s /bin/zsh root
 fi
+
+pip3 install thefuck
