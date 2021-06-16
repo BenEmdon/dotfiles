@@ -100,7 +100,7 @@ alias zshconfig="code $HOME/.zshrc"
 alias refrzsh="source $HOME/.zshrc"
 alias be="bundle exec"
 alias br="bin/rails"
-# eval $(thefuck --alias fuck)
+eval $(thefuck --alias fuck)
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
