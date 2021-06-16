@@ -1,5 +1,5 @@
 # dotfiles
-📂 🔨 *A constant work in progress* 🔨 📂
+🚧 *A constant work in progress* 🚧
 
 ## Installation
 
