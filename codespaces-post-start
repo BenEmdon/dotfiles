@@ -4,5 +4,8 @@
 # Always want to use ZSH as my default shell (e.g. for SSH)
 if ! grep -q "root.*/bin/zsh" /etc/passwd
 then
-  chsh -s /bin/zsh root
+  sudo chsh -s /bin/zsh root
 fi
+
+# Default to signing git commits
+git config --global commit.gpgsign true
